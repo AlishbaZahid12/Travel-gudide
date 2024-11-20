@@ -1,0 +1,316 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  background: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(240, 236, 236);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Semi-transparent overlay for subtle background opacity */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Subtle opacity */
+  z-index: 1;
+}
+
+/* Header Styling for Centered Buttons Above Text */
+.header {
+  position: absolute;
+  top: 200px; /* Positioning the buttons at the top */
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  width: 100%;
+  z-index: 6;
+}
+
+.header ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header li {
+  padding: 14px 28px;
+  background-color: #0077b6; /* Blue color matching water */
+  border-radius: 20px; /* Rounded corners */
+  color: #ffffff;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header li:hover {
+  background-color: #023e8a; /* Darker blue for hover */
+  transform: scale(1.1);
+}
+
+.header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.hero {
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw; /* Ensure hero section covers full height of the screen */
+  margin-top: 0; /* Space for the buttons on top */
+  background-image: url('/images/f.jpg'); /* Path to the image in the public folder */
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #ffbf00; /* Dark yellow color */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 5rem;
+  z-index: 1;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #faf8f8;
+  margin-bottom: 10px;
+  z-index: 1;
+
+}
+
+/* Button Styling */
+.button {
+  padding: 14px 28px;
+  border-radius: 20px; /* Rounded corners */
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #0077b6;
+  transition: background-color 0.3s, transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+  background-color: #0c2b46; /* Teal hover color */
+  opacity: 1;  /* Full opacity on hover */
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  background: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(240, 236, 236);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Class for Mountain Adventures background */
+.moun {
+  display: flex;
+  flex-direction: column;  /* Stack h1 and p vertically */
+  justify-content: center; /* Vertically center the content */
+  align-items: center;     /* Horizontally center the content */
+  text-align: center;      /* Ensure text is centered within the container */
+  height: 100vh; 
+  width: 100vw;          /* Ensure the container takes full height of the screen */
+  background-image: url('/images/pexels-sagui-andrea-200115-618833.jpg'); /* Correct path */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Heading styles for Mountain Adventures */
+.moun h1 {
+  font-size: 3rem;  /* Adjust the font size for the heading */
+  color: #ffbf00;   /* Set the heading color to yellow */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional text shadow */
+  margin-top: 38px;
+  z-index: 1;
+}
+
+/* Paragraph styles */
+.moun p {
+  font-size: 1.1rem; /* Set the font size to medium for the paragraph */
+  color: #ffffff;    /* Set the paragraph color to white */
+  z-index: 1;
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 768px) {
+  .moun h1 {
+    font-size: 2.5rem;
+  }
+
+  .moun p {
+    font-size: 1rem;
+  }
+}
+
+.scuba {
+  display: flex;
+  flex-direction: column;      /* Stack h1 and p vertically */
+  justify-content: center;     /* Vertically center the content */
+  align-items: center;         /* Horizontally center the content */
+  text-align: center;          /* Ensure text is centered within the container */
+  height: 100vh;               /* Ensure the container takes full height of the screen */
+  width: 100vw;
+  background-image: url('/images/scoba.jpg'); /* Corrected path */
+  background-size: cover;
+  background-position: center;
+}
+
+.scuba h1 {
+  font-size: 3rem; /* Adjust the font size for the heading */
+  color: #ffbf00;  /* Set the heading color to yellow */
+  margin-top: 38;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional: text shadow for better visibility */
+  z-index: 1;
+}
+
+.scuba p {
+  font-size: 1.1rem; /* Set the font size to medium for the paragraph */
+  color: #ffffff;    /* Set the paragraph color to white */
+  z-index: 1;
+}
+
+.urban {
+  display: flex;
+  flex-direction: column;      /* Stack h1 and p vertically */
+  justify-content: center;     /* Vertically center the content */
+  align-items: center;         /* Horizontally center the content */
+  text-align: center;          /* Ensure text is centered within the container */
+  height: 100vh;               /* Ensure the container takes full height of the screen */
+  width: 100vw;
+  background-image: url('/images/urban.jpg'); /* Updated path */
+  background-size: cover;
+  background-position: center;
+}
+
+
+.urban h1 {
+  font-size: 3rem; /* Adjust the font size for the heading */
+  color: #ffbf00;  /* Set the heading color to yellow */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional: text shadow for better visibility */
+  margin-top: 38;
+  z-index: 1;
+}
+
+.urban p {
+  font-size: 1.1rem; /* Set the font size to medium for the paragraph */
+  color: #ffffff;    /* Set the paragraph color to white */
+  z-index: 1;
+}
+
+.water {
+  display: flex;
+  flex-direction: column;      /* Stack h1 and p vertically */
+  justify-content: center;     /* Vertically center the content */
+  align-items: center;         /* Horizontally center the content */
+  text-align: center;          /* Ensure text is centered within the container */
+  height: 100vh;               /* Full height of the screen */
+  width: 100vw;                /* Full width of the viewport */
+  background-image: url('/images/water.jpg'); /* Updated path */
+  background-size: cover;
+  background-position: center;
+}
+
+
+.water h1 {
+  font-size: 3rem; /* Adjust the font size for the heading */
+  color: #ffbf00;  /* Set the heading color to yellow */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional: text shadow for better visibility */
+  margin-top: 38;
+  z-index: 1;
+}
+
+.water p {
+  font-size: 1.1rem; /* Set the font size to medium for the paragraph */
+  color: #ffffff;    /* Set the paragraph color to white */
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .header ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Additional Header Styles for Mobile */
+.header ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 20px;
+}
+
+.header li {
+  padding: 12px 24px;
+  background-color: #0a2e2a; /* Green color for button background */
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.header li:hover {
+  background-color: rgba(73, 231, 231, 0.2); /* Darker green hover color */
+}
